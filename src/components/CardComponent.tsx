@@ -1,23 +1,21 @@
 import React from 'react';
-// import Image from 'next/image';
 interface CardComponentProps {
     id: number;
-    name: string;
+    firstName?: string;
     email: string;
     number: string;
     imageSrc: string;
 }
 
-const CardComponent: React.FC<CardComponentProps> = ({ id, name, email, number, imageSrc }) => {
-    console.log("we are in cards component");
-    console.log(imageSrc);
+const CardComponent: React.FC<CardComponentProps> = ({ id, firstName, email, number, imageSrc }) => {
+
     return (
-        <div className="card col-3">
-            <div className=' overflow-hidden' >
-                <img className='w-[300px] h-[400px] bg-cover ' src={imageSrc} alt={name} />
+        <div className="card col-4 p-1">
+            <div className='cardImage overflow-hidden' >
+                <img className='w-[300px] h-[400px] bg-cover ' src={imageSrc} alt={firstName} />
             </div>
             <div>
-                <h2>{name}</h2>
+                <h2>{firstName}</h2>
                 <p>ID: {id}</p>
                 <p>Email: {email}</p>
                 <p>Number: {number}</p>

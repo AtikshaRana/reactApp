@@ -13,17 +13,23 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ onSearch }) => {
         }
     };
 
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchQuery(e.target.value);
+        handleSearch();
+    };
+
     return (
         <div>
             <input
                 type="text"
                 placeholder="Search..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={handleChange}
             />
             <button onClick={handleSearch}>Search</button>
         </div>
     );
 };
+
 
 export default SearchComponent;
