@@ -19,7 +19,7 @@ const ParentComponent: React.FC = () => {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch('../src/data.json');
+            const response = await fetch('./data.json');
             const data = await response.json();
             setCards(data.cards);
         }
