@@ -13,6 +13,8 @@ interface Card {
 const ParentComponent: React.FC = () => {
     const [cards, setCards] = useState<Card[]>([]);
     const [searchResults, setSearchResults] = useState<Card[]>([]);
+    console.log("searchResults");
+    console.log(cards);
     console.log(searchResults);
 
     useEffect(() => {
@@ -21,7 +23,6 @@ const ParentComponent: React.FC = () => {
             const data = await response.json();
             setCards(data.cards);
         }
-
         fetchData();
     }, []);
 
