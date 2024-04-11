@@ -35,7 +35,7 @@ const ParentComponent: React.FC = () => {
     return (
         <div>
             <SearchComponent onSearch={handleSearch} />
-            <div className="card-container flex w-[calc(100%+20px)]">
+            <div className="card-container row">
                 {searchResults.length !== 0 ? searchResults.map((result) => (
                     <CardComponent
                         key={result.id}

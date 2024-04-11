@@ -1,4 +1,5 @@
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Message from './Message';
 import ParentComponent from './components/ParentComponent';
 function App() {
