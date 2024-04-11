@@ -9,6 +9,8 @@ interface CardComponentProps {
 }
 
 const CardComponent: React.FC<CardComponentProps> = ({ id, name, email, number, imageSrc }) => {
+    console.log("we are in cards component");
+    console.log(imageSrc);
     return (
         <div className="card col-3">
             <div className=' overflow-hidden' >
